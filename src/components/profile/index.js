@@ -6,7 +6,6 @@ import TuitsAndReplies from "./tuits-and-replies";
 import Media from "./media";
 import MyLikes from "./my-likes";
 
-
 /**
  * Component for showing the profile of the user.
  *
@@ -16,6 +15,7 @@ import MyLikes from "./my-likes";
  *     <li>Tuits & replies</li>
  *     <li>Media</li>
  *     <li>Likes</li>
+ *     <li>Dislikes</li>
  * </ul>
  *
  * @component
@@ -50,12 +50,12 @@ const Profile = () => {
                     <i className="fa fa-badge-check text-primary"/></h4>
                 <span className="ps-2">67.6K Tuits</span>
                 <div className="mb-5 position-relative">
-                    <img className="w-100" src="../../../public/images/nasa-profile-header.jpg"/>
+                    <img className="w-100" src="../images/nasa-profile-header.jpg"/>
                     <div className="bottom-0 left-0 position-absolute">
                         <div className="position-relative">
                             <img
                                 className="position-relative ttr-z-index-1 ttr-top-40px ttr-width-150px"
-                                src="../../../public/images/nasa-3.png"/>
+                                src="../images/nasa-3.png"/>
                         </div>
                     </div>
                     <Link to="/profile/edit"
@@ -114,6 +114,12 @@ const Profile = () => {
                                                          ? 'active' : ''}`}>
                                 Likes</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link to="/profile/dislike"
+                                  className={`nav-link ${location.pathname.indexOf('dislike') >= 0
+                                                         ? 'active' : ''}`}>
+                                Dislikes</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -123,6 +129,7 @@ const Profile = () => {
                  <Route path="/tuits-and-replies" element={<TuitsAndReplies/>}/>
                  <Route path="/media" element={<Media/>}/>
                  <Route path="/likes" element={<MyLikes/>}/>
+                 <Route path="/dislike" element={<MyDislikes/>}/>
              </Routes>
             }
         </div>
