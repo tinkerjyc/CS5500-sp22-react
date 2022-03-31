@@ -5,7 +5,7 @@ import * as service from "../../services/security-service"
 import TuitsAndReplies from "./tuits-and-replies";
 import Media from "./media";
 import MyLikes from "./my-likes";
-import MyDislikes from "./my-dislikes";
+
 
 /**
  * Component for showing the profile of the user.
@@ -16,7 +16,6 @@ import MyDislikes from "./my-dislikes";
  *     <li>Tuits & replies</li>
  *     <li>Media</li>
  *     <li>Likes</li>
- *     <li>Dislikes</li>
  * </ul>
  *
  * @component
@@ -115,12 +114,6 @@ const Profile = () => {
                                                          ? 'active' : ''}`}>
                                 Likes</Link>
                         </li>
-                        <li className="nav-item">
-                            <Link to="/profile/dislike"
-                                  className={`nav-link ${location.pathname.indexOf('dislike') >= 0
-                                                         ? 'active' : ''}`}>
-                                Dislikes</Link>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -130,7 +123,6 @@ const Profile = () => {
                  <Route path="/tuits-and-replies" element={<TuitsAndReplies/>}/>
                  <Route path="/media" element={<Media/>}/>
                  <Route path="/likes" element={<MyLikes/>}/>
-                 <Route path="/dislike" element={<MyDislikes/>}/>
              </Routes>
             }
         </div>
