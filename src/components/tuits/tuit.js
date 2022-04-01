@@ -4,6 +4,15 @@ import TuitImage from "./tuit-image";
 import TuitVideo from "./tuit-video";
 import {useNavigate, Link} from "react-router-dom";
 
+/**
+ * Tuit component contains all information of the tuit object
+ * @param tuit Tuit object
+ * @param deleteTuit function that will delete a tuit
+ * @param likeTuit function triggered when user click like button
+ * @param dislikeTuit function triggered when user click dislike button
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const Tuit = ({tuit, deleteTuit, likeTuit, dislikeTuit}) => {
     const navigate = useNavigate();
     const daysOld = (tuit) => {
@@ -58,7 +67,7 @@ const Tuit = ({tuit, deleteTuit, likeTuit, dislikeTuit}) => {
                     tuit.image &&
                     <TuitImage tuit={tuit}/>
                 }
-                <TuitStats tuit={tuit} likeTuit={likeTuit}/>
+                <TuitStats tuit={tuit} likeTuit={likeTuit} dislikeTuit={dislikeTuit}/>
             </div>
         </li>
     );

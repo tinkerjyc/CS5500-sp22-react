@@ -4,6 +4,13 @@ import Tuit from "./tuit";
 import * as likesService from "../../services/likes-service";
 import * as tuitService from "../../services/tuits-service";
 
+/**
+ * Tuits component that has a list of tuit object
+ * @param tuits tuit array
+ * @param refreshTuits function that renders the refreshed list updated from backend
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const Tuits = ({tuits = [], refreshTuits}) => {
     const likeTuit = (tuit) =>
         likesService.userLikesTuit('me', tuit._id)

@@ -5,6 +5,7 @@ import * as service from "../../services/security-service"
 import TuitsAndReplies from "./tuits-and-replies";
 import Media from "./media";
 import MyLikes from "./my-likes";
+import MyDislikes from "./my-dislikes";
 
 /**
  * Component for showing the profile of the user.

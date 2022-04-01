@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import * as service from "../../services/users-service";
 import * as security from "../../services/security-service";
 import React from "react";
-import {UserList} from "./user-list";
+import {UserList} from "../profile/user-list";
 
 export const Login = () => {
     const [loginUser, setLoginUser] = useState({});

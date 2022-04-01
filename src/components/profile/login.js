@@ -3,6 +3,15 @@ import {useNavigate} from "react-router-dom";
 import {useState} from "react";
 import * as service from "../../services/security-service";
 
+/**
+ * Component for log in where user will enter username and password.
+ *
+ * @component
+ * @example
+ * return (
+ *      <Login />
+ * )
+ */
 export const Login = () => {
     const [loginUser, setLoginUser] = useState({});
     const navigate = useNavigate()
